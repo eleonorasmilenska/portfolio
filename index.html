@@ -119,25 +119,148 @@ dialog.project[open]{animation:pop-in .3s cubic-bezier(.2,.8,.3,1)}
 .p-photo figcaption{margin-top:10px;font:500 13px/1.4 var(--sans);color:#475569}
 .p-note{margin:8px 0 0;padding:16px 18px;border-radius:10px;background:#f1ece2;font:500 14px/1.5 var(--sans);color:#475569}
 
-.proj{max-width:1180px;margin:0 auto;padding:clamp(8px,2vw,24px) 0 clamp(40px,6vw,80px)}
-.pj-head{margin-bottom:clamp(20px,3vw,36px)}
-.pj-title{margin:0;font:400 clamp(48px,7vw,96px)/.95 var(--serif);letter-spacing:-.02em;color:#b5452b}
-.pj-sub{margin:14px 0 0;font:700 13px/1.5 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#475569}
-.proj figure{margin:0}
-.pj-hero{margin:0 calc(clamp(22px,4vw,52px) * -.5) clamp(48px,7vw,96px)}
-.pj-hero img{display:block;width:100%;height:auto;max-height:72dvh;object-fit:contain}
-.pj-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center;margin-bottom:clamp(56px,8vw,112px)}
-.pj-row:last-child{margin-bottom:0}
-.pj-text{max-width:52ch}
-.pj-text p{margin:0 0 22px;font:500 14px/1.8 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:#2b2a26}
-.pj-text p:last-child{margin-bottom:0}
-.pj-device{justify-self:end;width:100%;max-width:520px;padding:10px;border-radius:26px;background:#2a2a2c;box-shadow:0 24px 50px -28px rgba(0,0,0,.6)}
-.pj-device img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 40%;border-radius:18px}
-.pj-poster img{display:block;width:auto;max-width:100%;max-height:min(78dvh,760px);height:auto;box-shadow:0 24px 50px -30px rgba(0,0,0,.55)}
-.pj-facts{display:grid;gap:18px;margin:0 0 30px;padding-bottom:28px;border-bottom:1.5px solid #e6e0d3}
-.pj-facts dt{font:700 12px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#475569}
-.pj-facts dd{margin:4px 0 0;font:400 clamp(20px,2vw,24px)/1.3 var(--serif);color:var(--ink)}
-.pj-text p.pj-note{margin-top:8px;font-size:12px;letter-spacing:.06em;color:#475569;text-transform:none}
+.pr-intro{max-width:780px;margin:0 auto;padding:clamp(12px,3vw,32px) 0 clamp(48px,7vw,88px);text-align:center}
+.pr-lead{margin:18px auto 0;max-width:62ch;font:500 clamp(15px,1.6vw,17px)/1.65 var(--sans);color:#475569}
+.pr-kicker{margin:24px 0 0;font:700 13px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.pr{--accent:#14213d;--card:#f1ebe3;max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,88px) 0;border-top:1.5px solid #e6e0d3}
+.pr-barcaffe{--accent:#b8125a}
+.pr-belmondo{--accent:#6f5f52}
+.pr-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 24px;margin-bottom:clamp(24px,3.5vw,44px)}
+.pr-num{font:400 clamp(22px,2.6vw,32px)/1 var(--serif);color:var(--accent)}
+.sheet .pr-brand{margin:0;font:400 clamp(40px,6vw,76px)/.9 var(--serif);letter-spacing:-.02em;color:var(--accent)}
+.pr-logo img{display:block;width:auto;height:clamp(44px,6vw,76px)}
+.pr-barcaffe .pr-logo img{height:clamp(30px,4vw,50px)}
+.pr-reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.3,1)}
+.pr-reveal.in{opacity:1;transform:none}
+.pr-head-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.pr-topic{margin:0;font:400 clamp(40px,6vw,76px)/.9 var(--serif);letter-spacing:-.02em}
+.pr-topic .t1{color:var(--ink)}
+.pr-topic .t2{color:#a8998b}
+.pr-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.ph{display:grid;place-items:center;padding:12px;border-radius:16px;background:repeating-linear-gradient(135deg,#ece5db 0 14px,#e6ded3 14px 28px);color:#8a8075;font:700 11px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-align:center}
+.ph-square{aspect-ratio:1}
+.ph-wide{aspect-ratio:21/8}
+.ph-poster{aspect-ratio:3/4}
+.ph-email{aspect-ratio:1/2.1;background:#fff;border:1px solid var(--line)}
+.ph-popup{aspect-ratio:4/5}
+.pr-copy{margin-top:24px;text-align:center}
+.pr-copy p{margin:0 auto 10px;max-width:46ch;font:500 15px/1.6 var(--sans)}
+.pr-copy p:last-child{margin-bottom:0}
+.sheet .pr-label,.pr-copy .pr-label{margin:0 0 12px;font:700 12px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.pcard{padding:clamp(22px,3vw,34px);border-radius:16px;background:var(--card)}
+.pcard+.pcard{margin-top:20px}
+.card-wide{margin-top:clamp(24px,3vw,36px)}
+.pcard .card-title{margin:0;font:400 clamp(22px,2.4vw,28px)/1.15 var(--serif);color:var(--accent)}
+.pcard .card-sub{margin:8px 0 0;font:700 12px/1.5 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#475569}
+.pcard h4{margin:22px 0 6px;font:700 12px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.pcard p,.pcard li{font:500 15px/1.6 var(--sans);color:var(--ink)}
+.pcard p{margin:0}
+.pcard p+p{margin-top:8px}
+.pcard ul{margin:0;padding-left:18px}
+.pcard li+li{margin-top:6px}
+.pcard li::marker{color:var(--accent)}
+.pcard .quote{font:400 18px/1.4 var(--serif);color:var(--accent)}
+.pcard .quote-lead{margin-top:16px}
+.pcard .note{margin-top:16px;padding-top:14px;border-top:1px solid #e1d9ce;font-size:13px;color:#475569}
+.card-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,48px)}
+.why{list-style:none;padding:0!important}
+.why b{color:var(--accent)}
+.pr-h{margin:clamp(28px,4vw,44px) 0 14px;font:400 clamp(24px,2.8vw,32px)/1.15 var(--serif);color:var(--accent)}
+.pr-split{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;margin-top:clamp(48px,6vw,80px)}
+.pr-split .pr-h{margin-top:0}
+.pr-body{margin:0;max-width:44ch;font:500 17px/1.7 var(--sans);color:#475569}
+.pr-results{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.85fr) minmax(0,.85fr);gap:clamp(20px,3vw,32px);align-items:stretch;margin-top:clamp(24px,3vw,36px)}
+.pr-bel{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);align-items:stretch}
+.bel-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.shot{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 20px 40px -28px rgba(0,0,0,.5)}
+.mock{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 24px rgba(0,0,0,.18))}
+.pr-hero{margin:0 auto}
+.ig-stage{container-type:inline-size;margin:0 auto;max-width:1180px}
+.ig-row{display:flex;align-items:center;justify-content:center;gap:1.5em;padding:2em 0 3em;font-size:calc(100cqw / 110)}
+.ig-slide{position:relative;flex:0 0 19.5em;aspect-ratio:9/16;overflow:hidden;color:#fff;background:linear-gradient(160deg,#a8122c,#7c0a1d);box-shadow:0 1.8em 3em -1.8em rgba(0,0,0,.45)}
+.ig-count{position:absolute;top:1.5em;left:1.6em;font:500 .85em/1 var(--sans);letter-spacing:.02em;opacity:.9}
+.ig-card{position:absolute;inset:3.9em 1.1em 2.6em;display:flex;flex-direction:column;overflow:hidden;border-radius:1.1em;background:#efefef}
+.ig-photo{position:relative;flex:1}
+.ig-photo .ph{position:absolute;inset:0;border-radius:0}
+.ig-like{position:absolute;top:1.2em;right:1.2em;display:grid;place-items:center;width:3em;height:3em;border-radius:.8em;background:#fff;color:#e8344e;box-shadow:0 .2em .6em rgba(0,0,0,.12)}
+.ig-like svg{width:1.7em;height:1.7em;stroke:none}
+.ig-info{padding:1.3em 1.4em 1.5em;color:#1d1b18}
+.ig-info p{margin:0}
+.ig-title{font:700 1.25em/1.2 var(--sans)}
+.ig-sub{margin-top:.2em!important;font:500 1em/1.35 var(--sans)}
+.ig-where{display:flex;align-items:center;gap:.6em;margin-top:1.3em!important;font:500 .85em/1 var(--sans);color:#8a8580}
+.ig-avatar{flex:none;display:inline-block;width:2.2em;height:2.2em;border-radius:50%;background:repeating-linear-gradient(135deg,#d8d0c4 0 .35em,#cfc6b9 .35em .7em)}
+.ig-promo{padding:3.8em 1.6em 0}
+.ig-last .ig-count{left:auto;right:1.6em}
+.ig-head{margin:0;font:700 2.2em/1.08 var(--sans);letter-spacing:-.01em}
+.ig-serif{margin:.35em 0 0;font:400 2em/1.08 var(--serif);opacity:.92}
+.ig-bag{position:absolute;right:2.6em;bottom:5em;width:9em;aspect-ratio:3/4;border-radius:.6em}
+.ph-dark{background:repeating-linear-gradient(135deg,rgba(255,255,255,.1) 0 .7em,rgba(255,255,255,.04) .7em 1.4em);color:rgba(255,255,255,.75);font-size:.65em}
+.ig-logo{position:absolute;left:1.6em;bottom:1.7em;width:auto;height:1.5em;filter:brightness(0) invert(1)}
+.ig-next{position:absolute;right:1.4em;bottom:1.3em;display:grid;place-items:center;width:3em;height:3em;border-radius:50%;background:#fff;color:#1d1b18}
+.ig-next svg{width:1.5em;height:1.5em;stroke-width:2.4}
+.ig-phone{flex:0 0 22em;height:51em;padding:.8em;border-radius:3.8em;background:#1b1b1d;box-shadow:0 2.4em 4em -2em rgba(0,0,0,.5),inset 0 0 0 .15em #3a3a3e}
+.ig-screen{display:flex;flex-direction:column;height:100%;overflow:hidden;border-radius:3.1em;background:#f2f2f3;color:#1d1b18}
+.ig-status{position:relative;display:flex;align-items:center;justify-content:space-between;height:3.4em;padding:0 1.9em 0 2.2em;font:600 .85em/1 var(--sans)}
+.ig-status>span:first-child{font-size:1.05em}
+.ig-island{position:absolute;left:50%;top:.75em;width:7em;height:2.1em;border-radius:1.1em;background:#111;transform:translateX(-50%)}
+.ig-sys{display:flex;align-items:center;gap:.35em}
+.ig-sys svg{height:.85em;width:auto;fill:currentColor}
+.ig-stories{display:flex;justify-content:space-between;padding:.4em 1.4em 1em}
+.ig-story{position:relative;display:grid;place-items:center;width:4em;height:4em;border-radius:50%;background:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7)}
+.ig-story .ig-avatar{width:3.5em;height:3.5em;box-shadow:0 0 0 .2em #f2f2f3}
+.ig-story.own{background:none}
+.ig-story.own .ig-avatar{width:3.7em;height:3.7em;box-shadow:none}
+.ig-plus{position:absolute;right:.05em;bottom:.05em;display:grid;place-items:center;width:1.3em;height:1.3em;border-radius:50%;background:#2f80ed;color:#fff;font:700 .95em/1 var(--sans);box-shadow:0 0 0 .2em #f2f2f3}
+.ig-post-head{display:flex;align-items:center;gap:.6em;padding:0 1.2em .7em}
+.ig-post-head .ig-avatar{width:1.9em;height:1.9em}
+.ig-user{flex:1;font:600 .8em/1 var(--sans)}
+.ig-dots{width:1.3em;height:1.3em}
+.ig-first{flex:none;aspect-ratio:auto;height:27em;margin:0 .6em;border-radius:1em;box-shadow:none}
+.ig-first .ig-count{left:auto;right:1.5em}
+.ig-first .ig-head{max-width:9em;margin-top:.6em}
+.ig-first .ig-bag{left:50%;right:auto;bottom:3.8em;width:9.5em;transform:translateX(-50%)}
+.ig-actions{display:flex;align-items:center;gap:.9em;padding:1em 1.2em .5em}
+.ig-actions svg{width:1.5em;height:1.5em}
+.ig-actions .liked{color:#e8344e;stroke:none}
+.ig-actions .ig-save{margin-left:auto}
+.ig-likes,.ig-caption{margin:0;padding:0 1.2em;font:500 .7em/1.5 var(--sans)}
+.ig-likes{display:flex;align-items:center;gap:.5em}
+.ig-faces{display:flex}
+.ig-faces i{width:1.3em;height:1.3em;margin-right:-.4em;border-radius:50%;background:#cfc6b9;box-shadow:0 0 0 .15em #f2f2f3}
+.ig-caption b{font-weight:700}
+.ig-nav{display:flex;justify-content:space-around;align-items:center;margin-top:auto;padding:1.1em 1em 1.6em;background:#e9e9eb}
+.ig-nav svg{width:1.55em;height:1.55em}
+.fill-frame{position:relative;overflow:hidden;border-radius:16px;box-shadow:0 20px 40px -28px rgba(0,0,0,.5)}
+.fill-frame>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.poster-frame{contain:size}
+.poster-frame>img{object-position:50% 40%}
+.email-frame{background:#fff;border:1px solid var(--line)}
+.email-frame>img{object-position:50% 0}
+.phone-feed{justify-self:center;height:100%;width:auto;max-width:100%;aspect-ratio:9/19.5;contain:size}
+.phone-feed .screen{display:flex;align-items:center;height:100%;overflow:hidden;border-radius:24px;background:#f0f2f5}
+.phone-feed .screen img{display:block;width:100%;height:auto}
+.pair-img{aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line)}
+.bel-pair{align-items:start}
+.dev{background:#1d1d1f;box-shadow:0 22px 44px -26px rgba(0,0,0,.55)}
+.tablet{padding:14px;border-radius:30px}
+.tablet .ph{aspect-ratio:4/3;border-radius:18px}
+.tablet-tall .ph{aspect-ratio:3/4}
+.phone{position:relative;padding:9px;border-radius:32px}
+.phone::before{content:"";position:absolute;top:9px;left:50%;z-index:1;width:36%;height:16px;border-radius:0 0 12px 12px;background:#1d1d1f;transform:translateX(-50%)}
+.phone .ph{aspect-ratio:9/19;border-radius:24px}
+.screen-img{position:relative;aspect-ratio:9/19;overflow:hidden;border-radius:24px;background:#111}
+.screen-img>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.screen-img.fit::before{content:"";position:absolute;inset:-20px;background:var(--bg) center/cover;filter:blur(14px) brightness(.8)}
+.screen-img.fit>img{object-fit:contain}
+.lid{padding:12px 12px 14px;border-radius:14px 14px 0 0;background:#1d1d1f}
+.lid .ph{aspect-ratio:16/10;border-radius:4px}
+.lap-video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;background:#2a2a2c}
+.base{height:12px;margin:0 -7%;border-radius:2px 2px 12px 12px;background:linear-gradient(#d4d4d8,#9c9ca1)}
+.pr-other{max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,88px) 0 clamp(24px,4vw,48px);border-top:1.5px solid #e6e0d3}
+.sheet .pr-other h2{margin-bottom:clamp(28px,4vw,48px);text-align:center;color:#9a3412}
+.phones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,3vw,36px);max-width:920px;margin:0 auto}
+.laptops{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,7vw,96px);max-width:1000px;margin:clamp(40px,6vw,72px) auto 0;padding:0 5%}
 
 .lang-switch{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;gap:2px;padding:4px;background:#fff;border:1px solid var(--line);border-radius:999px;box-shadow:0 6px 18px -8px rgba(0,0,0,.35)}
 .lang-switch button{border:0;background:none;padding:7px 12px;border-radius:999px;font:700 12px/1 var(--sans);letter-spacing:.06em;color:#475569;cursor:pointer}
@@ -201,10 +324,17 @@ dialog.project[open]{animation:pop-in .3s cubic-bezier(.2,.8,.3,1)}
   .entry .when{order:-1;padding:0}
   .row{grid-template-columns:1fr;gap:10px}
   .case,.steps,.p-row{grid-template-columns:1fr}
-  .pj-row{grid-template-columns:1fr}
-  .pj-row-flip .pj-text{order:-1}
-  .pj-device{justify-self:stretch;max-width:none}
-  .pj-hero{margin-left:0;margin-right:0}
+  .pr-grid,.pr-split,.pr-results,.pr-bel,.card-cols,.laptops{grid-template-columns:1fr}
+  .pr-split>div:last-child{order:-1}
+  .poster-frame{width:100%;max-width:360px;aspect-ratio:1167/2000;justify-self:center}
+  .email-frame{width:100%;max-width:360px;aspect-ratio:600/2112;justify-self:center}
+  .phone-feed{height:auto;width:min(300px,100%);contain:none}
+  .poster-frame{contain:none}
+  .phones{grid-template-columns:repeat(2,minmax(0,1fr));max-width:420px}
+  .ph-wide{aspect-ratio:4/3}
+  .ig-stage{overflow-x:auto;overscroll-behavior-x:contain;margin:0 -6px}
+  .ig-row{width:760px;font-size:calc(760px / 110);justify-content:flex-start;padding-left:6px;padding-right:6px}
+  .pr-head-right{align-items:flex-start}
   .p-row.flip .p-text{order:-1}
 }
 @media (max-width:520px){
@@ -243,50 +373,55 @@ dialog.project[open]{animation:pop-in .3s cubic-bezier(.2,.8,.3,1)}
       <div class="body">
         <div class="sheet" role="tabpanel">
           <div class="project-list">
-          <div class="cases">
-          <section class="proj proj-1" aria-labelledby="p1-title">
-            <header class="pj-head">
-              <h3 id="p1-title" class="pj-title">Barcaffè</h3>
-              <p class="pj-sub" data-en="Slovenia’s unofficial currency · paid media campaign">Slovenska neuradna valuta · kampanja v plačljivih medijih</p>
-            </header>
-            <figure class="pj-hero"><img src="images/barcaffe-carousel-cutout.png" alt="Carousel objava za Instagram s petimi diapozitivi: monstera, vintage stol in kolo za 200 g Barcaffè" data-en-alt="Instagram carousel with five slides: a monstera, a vintage chair and a bike for 200 g of Barcaffè"></figure>
-            <div class="pj-row">
-              <div class="pj-text">
-                <p data-en="In Slovenian second-hand groups, an unusual offer sometimes appears: a trade for 200 g of Barcaffè.">V slovenskih skupinah za prodajo rabljenih stvari se včasih pojavi nenavadna ponudba: menjava za 200 g Barcaffè.</p>
-                <p data-en="The campaign turns this habit into a story. Marketplace-style posts trade everyday items for coffee and tie the brand to local culture, driving awareness and sharing.">Kampanja to navado spremeni v zgodbo. Objave v slogu Facebook Marketplacea vsakdanje predmete menjajo za kavo in znamko povežejo z lokalno kulturo, kar spodbuja prepoznavnost in deljenje.</p>
+          <header class="pr-intro">
+            <h2><span data-en="Projects and case studies">Projekti in študije primerov</span></h2>
+            <p class="pr-lead" data-en="Independently developed concept projects that show my creative approach, strategic thinking and marketing ideas. The projects were not carried out in practice.">Samostojno zasnovani konceptualni projekti, ki prikazujejo moj kreativni pristop, strateško razmišljanje in marketinške ideje. Projekti niso bili izvedeni v praksi.</p>
+            <p class="pr-kicker" data-en="Creative strategy &amp; digital marketing">Kreativna strategija &amp; digitalni marketing</p>
+          </header>
+          <section class="pr pr-eventim" aria-labelledby="pr1">
+            <header class="pr-head"><span class="pr-num" data-en="Project 1">Projekt 1</span><h3 id="pr1" class="pr-brand pr-logo"><img src="logos/eventim.png" alt="Eventim" width="635" height="186"></h3></header>
+            <div class="pr-grid">
+              <div>
+                <img class="shot" src="images/eventim-meta-ad.webp" width="1199" height="1312" alt="Oglas za Meta: Božiček z veliko vrečo drži darilni bon Eventim" data-en-alt="Meta ad: Santa with a huge sack holding an Eventim gift voucher" loading="lazy">
+                <div class="pr-copy"><p class="pr-label" data-en="Meta post copy">Besedilo objave za Meta</p><p data-en="The biggest gifts don’t need a big sack. 🎁">Največja darila ne potrebujejo velike vreče. 🎁</p><p data-en="Sometimes the biggest gift is an experience we remember for a long time. With an Eventim gift voucher, the recipient picks a concert, a show, a sports event or something entirely their own.">Včasih je največje darilo doživetje, ki se ga bomo še dolgo spominjali. S podarjenim bonom Eventim obdarovanec sam izbere koncert, predstavo, športni dogodek ali nekaj povsem svojega.</p><p data-br data-en="A small voucher, big experiences. / 🎟️ Find the gift voucher at eventim.si">Majhen bon, velika doživetja.<br>🎟️ Odkrij darilni bon na eventim.si</p></div>
               </div>
-              <figure class="pj-device"><img src="images/barcaffe-meta-ad.webp" alt="Sponzorirana objava Barcaffè na Facebooku s komentarji o menjavi" data-en-alt="Sponsored Barcaffè post on Facebook with swap comments" loading="lazy"></figure>
+              <div>
+                <div class="pcard"><p class="card-title" data-en="Eventim — A small voucher. Big experiences.">Eventim — Majhen bon. Velika doživetja.</p><p class="card-sub" data-en="Creative advertising campaign concept">Kreativni koncept oglaševalske kampanje</p><h4 data-en="Challenge">Izziv</h4><p data-en="Position the Eventim gift voucher as a thoughtful, desirable Christmas gift, not just a last-minute fix.">Pozicionirati darilni bon Eventim kot premišljeno in zaželeno božično darilo, ne le kot rešitev v zadnjem trenutku.</p><h4 data-en="Creative idea">Kreativna ideja</h4><p class="quote" data-en="“The biggest gifts don’t need a big sack.”">»Največja darila ne potrebujejo velike vreče.«</p><p data-en="A huge Santa sack. A small gift voucher. A simple visual contrast with a clear message: the best gifts aren’t things, they’re experiences.">Ogromna Božičkova vreča. Majhen darilni bon. Preprost vizualni kontrast z jasnim sporočilom: najlepša darila niso stvari, temveč doživetja.</p><h4 data-en="Strategy">Strategija</h4><ul><li data-en="I developed the creative concept, visuals and ad copy.">Razvila sem kreativni koncept, vizuale in oglasna besedila.</li><li data-en="I defined the key target groups and their buying motives.">Opredelila sem ključne ciljne skupine in njihove nakupne motive.</li><li data-en="I prepared Meta ad variations for different target groups.">Pripravila sem različice Meta oglasov za različne ciljne skupine.</li><li data-en="I proposed A/B testing and ad optimisation to increase sales.">Predlagala sem A/B-testiranje in optimizacijo oglasov za povečanje prodaje.</li></ul></div>
+                <h4 class="pr-h" data-en="Why would the idea work?">Zakaj bi ideja delovala?</h4>
+                <div class="pcard"><ul class="why"><li><b data-en="Attention:">Pozornost:</b> <span data-en="a strong visual contrast catches the eye.">izrazit vizualni kontrast pritegne pogled.</span></li><li><b data-en="Recognition:">Prepoznavnost:</b> <span data-en="Santa creates an instant festive association.">Božiček ustvari takojšnjo praznično povezavo.</span></li><li><b data-en="Value:">Vrednost:</b> <span data-en="the focus is on experiences and freedom of choice.">poudarek na doživetjih in svobodi izbire.</span></li><li><b data-en="Conversion:">Konverzija:</b> <span data-en="a clear call to buy.">jasen poziv k nakupu.</span></li></ul></div>
+              </div>
             </div>
-            <div class="pj-row pj-row-flip">
-              <figure class="pj-poster"><img src="images/barcaffe-poster.webp" alt="Plakat kampanje Barcaffè na zunanjem oglasnem panoju" data-en-alt="Barcaffè campaign poster on an outdoor billboard" loading="lazy"></figure>
-              <div class="pj-text">
-                <dl class="pj-facts"><div><dt data-en="Goal">Cilj</dt><dd data-en="Brand awareness and social media engagement">Prepoznavnost znamke in interakcije na družbenih omrežjih</dd></div><div><dt data-en="Audience">Ciljna skupina</dt><dd data-en="Adults aged 25–44 in Slovenia">Odrasli od 25 do 44 let v Sloveniji</dd></div><div><dt data-en="Channels">Kanali</dt><dd data-en="Facebook, Instagram, outdoor">Facebook, Instagram, zunanje oglaševanje</dd></div><div><dt data-en="Budget">Proračun</dt><dd data-en="€1,500 for 30 days (simulated)">1.500 € za 30 dni (simulacija)</dd></div></dl>
-                <p data-en="Performance would be tracked through reach, impressions, engagement rate, shares and cost per engagement. A/B tests of visuals and messages would show which versions work best.">Uspešnost bi merila z dosegom, prikazi, stopnjo interakcij, delitvami in stroškom na interakcijo. A/B-testi vizualov in sporočil bi pokazali, katere različice delujejo najbolje.</p>
-                <p class="pj-note" data-en="Independent concept project. Strategy and budget are hypothetical; no results are available.">Samostojni konceptualni projekt. Strategija in proračun sta hipotetična; rezultati niso na voljo.</p>
+            <div class="pr-split">
+              <img class="mock" src="images/eventim-email-tablet.webp" width="1448" height="1086" alt="Promocijsko e-sporočilo Eventim na tablici: Še en dan. Ne bodi Grinch tega božiča." data-en-alt="Eventim promotional email on a tablet: One more day. Don’t be a Grinch this Christmas." loading="lazy">
+              <div><h4 class="pr-h" data-en="Proposed promotional email for a last-minute gift voucher purchase">Predlog promocijskega e-sporočila za nakup darilnega bona v zadnjem trenutku</h4><p class="pr-label" data-en="Designed in Canva">Oblikovano v Canvi</p><p class="pr-body" data-en="Although the campaign positions the voucher as a thoughtful gift, I also used the last-minute sales opportunity and designed a promotional email in Canva.">Čeprav kampanja darilni bon pozicionira kot premišljeno darilo, sem izkoristila tudi prodajno priložnost v zadnjem trenutku in v Canvi pripravila promocijsko e-sporočilo.</p></div>
+            </div>
+          </section>
+          <section class="pr pr-barcaffe" aria-labelledby="pr2">
+            <header class="pr-head"><span class="pr-num" data-en="Project 2">Projekt 2</span><h3 id="pr2" class="pr-brand pr-logo"><img src="logos/barcaffe.png" alt="Barcaffè" width="400" height="96"></h3></header>
+            <div class="ig-stage pr-hero" role="img" aria-label="Vrtiljak za Instagram s petimi diapozitivi: monstera, vintage stol in kolo za 200 g Barcaffè" data-en-label="Instagram carousel with five slides: a monstera, a vintage chair and a bike for 200 g of Barcaffè"><div class="ig-row"><div class="ig-slide ig-item"><span class="ig-count">2/5</span><div class="ig-card"><div class="ig-photo"><div class="ph "><span data-en="Monstera">Monstera</span></div><span class="ig-like"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.2-4.4-9.2-8.8C1.4 8.5 3.4 4.8 6.9 4.8c2 0 3.5 1.1 5.1 2.9 1.6-1.8 3.1-2.9 5.1-2.9 3.5 0 5.5 3.7 4.1 6.9-2 4.4-9.2 8.8-9.2 8.8z"/></svg></span></div><div class="ig-info"><p class="ig-title" data-en="Monstera">Monstera</p><p class="ig-sub" data-en="Swap for 200 g of Barcaffè.">Menjava za 200 g Barcaffè.</p><p class="ig-where"><span class="ig-avatar"></span>Ljubljana</p></div></div></div><div class="ig-phone"><div class="ig-screen"><div class="ig-status"><span>9:50</span><span class="ig-island"></span><span class="ig-sys"><svg viewBox="0 0 18 12" aria-hidden="true"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1" opacity=".35"/></svg><svg viewBox="0 0 16 12" aria-hidden="true"><path d="M8 11.5 5.6 8.9a3.4 3.4 0 0 1 4.8 0zM3.4 6.7a6.5 6.5 0 0 1 9.2 0l-1.4 1.5a4.5 4.5 0 0 0-6.4 0zM1 4.3a9.9 9.9 0 0 1 14 0l-1.4 1.5a7.9 7.9 0 0 0-11.2 0z"/></svg><svg viewBox="0 0 26 12" aria-hidden="true"><rect x=".5" y=".5" width="22" height="11" rx="3" fill="none" stroke="currentColor" opacity=".5"/><rect x="2" y="2" width="17" height="8" rx="1.8"/><rect x="23.5" y="4" width="2" height="4" rx="1" opacity=".5"/></svg></span></div><div class="ig-stories"><span class="ig-story own"><span class="ig-avatar"></span><span class="ig-plus">+</span></span><span class="ig-story"><span class="ig-avatar"></span></span><span class="ig-story"><span class="ig-avatar"></span></span><span class="ig-story"><span class="ig-avatar"></span></span></div><div class="ig-post-head"><span class="ig-avatar"></span><span class="ig-user">Denial Joe</span><svg class="ig-dots" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="12" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="19" cy="12" r="1.2" fill="currentColor"/></svg></div><div class="ig-slide ig-promo ig-first"><span class="ig-count">1/5</span><p class="ig-head" data-en="What is worth 200 g of Barcaffè?">Kaj vse je vredno 200 g Barcaffè?</p><div class="ph ph-dark ig-bag"><span data-en="Barcaffè bag">Vrečka Barcaffè</span></div><img class="ig-logo" src="logos/barcaffe.png" alt="Barcaffè" width="400" height="96"><span class="ig-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div><div class="ig-actions"><svg class="liked" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.2-4.4-9.2-8.8C1.4 8.5 3.4 4.8 6.9 4.8c2 0 3.5 1.1 5.1 2.9 1.6-1.8 3.1-2.9 5.1-2.9 3.5 0 5.5 3.7 4.1 6.9-2 4.4-9.2 8.8-9.2 8.8z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.5L3.5 20.5l1.4-4.6A8.4 8.4 0 1 1 20.5 11.6z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 3 10 14.5M21.5 3l-7 18-4.5-6.5L3 10z"/></svg><svg class="ig-save" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h12v17l-6-4.4-6 4.4z"/></svg></div><p class="ig-likes"><span class="ig-faces"><i></i><i></i><i></i></span><span data-en="Liked by Jana and others">Všeč je Jani in drugim</span></p><p class="ig-caption" data-en="barcaffe What is worth 200 g of Barcaffè?"><b>barcaffe</b> Kaj vse je vredno 200 g Barcaffè?</p><div class="ig-nav"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7V20.5h-5.5v-6h-6v6H3.5z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M3.5 8.5h17M9 3.5l2.5 5M14.5 3.5l2.5 5M10.5 11.5v5.5l4.5-2.75z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12.5H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="10" r="3"/><path d="M6.6 18.2c1.3-1.9 3.2-2.8 5.4-2.8s4.1.9 5.4 2.8"/></svg></div></div></div><div class="ig-slide ig-item"><span class="ig-count">3/5</span><div class="ig-card"><div class="ig-photo"><div class="ph "><span data-en="Vintage chair">Vintage stol</span></div><span class="ig-like"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.2-4.4-9.2-8.8C1.4 8.5 3.4 4.8 6.9 4.8c2 0 3.5 1.1 5.1 2.9 1.6-1.8 3.1-2.9 5.1-2.9 3.5 0 5.5 3.7 4.1 6.9-2 4.4-9.2 8.8-9.2 8.8z"/></svg></span></div><div class="ig-info"><p class="ig-title" data-en="Vintage chair">Vintage stol</p><p class="ig-sub" data-en="Swap for 200 g of Barcaffè.">Menjava za 200 g Barcaffè.</p><p class="ig-where"><span class="ig-avatar"></span>Maribor</p></div></div></div><div class="ig-slide ig-item"><span class="ig-count">4/5</span><div class="ig-card"><div class="ig-photo"><div class="ph "><span data-en="Bike">Kolo</span></div><span class="ig-like"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.2-4.4-9.2-8.8C1.4 8.5 3.4 4.8 6.9 4.8c2 0 3.5 1.1 5.1 2.9 1.6-1.8 3.1-2.9 5.1-2.9 3.5 0 5.5 3.7 4.1 6.9-2 4.4-9.2 8.8-9.2 8.8z"/></svg></span></div><div class="ig-info"><p class="ig-title" data-en="Bike">Kolo</p><p class="ig-sub" data-en="Swap for 200 g of Barcaffè.">Menjava za 200 g Barcaffè.</p><p class="ig-where"><span class="ig-avatar"></span>Celje</p></div></div></div><div class="ig-slide ig-promo ig-last"><span class="ig-count">5/5</span><p class="ig-head" data-en="Some things aren’t for sale.">Nekatere stvari niso naprodaj.</p><p class="ig-serif" data-en="But they are for Barcaffè.">So pa za Barcaffè.</p><div class="ph ph-dark ig-bag"><span data-en="Barcaffè bag">Vrečka Barcaffè</span></div><img class="ig-logo" src="logos/barcaffe.png" alt="Barcaffè" width="400" height="96"><span class="ig-next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></div></div>
+            <div class="pcard card-wide"><p class="card-title" data-en="Barcaffè — Slovenia’s unofficial currency">Barcaffè — neuradna valuta Slovenije</p><p class="card-sub" data-en="Creative advertising campaign concept · Meta Ads &amp; outdoor">Kreativni koncept oglaševalske kampanje · Meta Ads &amp; zunanje oglaševanje</p><p class="quote quote-lead" data-en="“Some things aren’t for sale. But they are for Barcaffè.”">»Nekatere stvari niso naprodaj. So pa za Barcaffè.«</p><div class="card-cols"><div><h4 data-en="Starting point">Izhodišče</h4><p data-en="In Slovenian buy-and-give-away groups, people sometimes offer 200 g of Barcaffè coffee instead of money. This everyday habit inspired the idea: Barcaffè isn’t just coffee, it’s almost Slovenia’s unofficial currency.">V slovenskih skupinah za prodajo in podarjanje ljudje včasih namesto denarja za izdelke ponudijo 200 g kave Barcaffè. Ta vsakdanji pojav je navdihnil idejo: Barcaffè ni le kava, ampak skoraj neuradna slovenska valuta.</p></div><div><h4 data-en="Creative idea">Kreativna ideja</h4><p data-en="The campaign is built on humour and recognisable Facebook Marketplace posts. The ads mimic classifieds, conversations and swaps of items for a pack of Barcaffè.">Kampanja temelji na humorju in prepoznavnih objavah s Facebook Marketplacea. Oglasi posnemajo male oglase, pogovore in menjave izdelkov za paket kave Barcaffè.</p><p class="quote" data-en="“Will you take 200 g of Barcaffè for it?”">»Dam za 200 g Barcaffè?«</p></div></div></div>
+            <div class="pr-results">
+              <div class="pcard"><p class="card-title" data-en="Results &amp; impact">Rezultati in učinek</p><h4 data-en="Strategy">Strategija</h4><ul><li data-en="I developed the creative concept, visuals and ad copy.">Razvila sem kreativni koncept, vizuale in oglasna besedila.</li><li data-en="I designed the campaign to raise brand awareness and social media engagement.">Kampanjo sem zasnovala za povečanje prepoznavnosti znamke in interakcij na družbenih omrežjih.</li><li data-en="I prepared static Meta ads, a carousel and an outdoor advertising concept.">Pripravila sem statične Meta oglase, vrtiljak in koncept zunanjega oglaševanja.</li><li data-en="I planned testing of creative variations and optimisation based on audience response.">Predvidela sem testiranje kreativnih različic in optimizacijo glede na odzive občinstva.</li></ul><h4 data-en="Result">Rezultat</h4><p data-en="A multichannel advertising concept that turns a recognisable local habit into a humorous, instantly understood brand message.">Razvit večkanalni oglaševalski koncept, ki prepoznaven lokalni običaj spremeni v humorno in hitro razumljivo sporočilo blagovne znamke.</p><p class="note" data-en="Independent concept project. The campaign was not run, so actual results are not available.">Samostojni konceptualni projekt. Kampanja ni bila izvedena, zato dejanski rezultati niso na voljo.</p></div>
+              <div class="fill-frame poster-frame"><img src="images/barcaffe-poster.webp" width="1167" height="2000" alt="Plakat kampanje Barcaffè na zunanjem oglasnem panoju" data-en-alt="Barcaffè campaign poster on an outdoor billboard" loading="lazy"></div>
+              <div class="dev phone phone-feed"><div class="screen"><img src="images/barcaffe-meta-ad.webp" width="522" height="816" alt="Sponzorirana objava Barcaffè na Facebooku s komentarji o menjavi" data-en-alt="Sponsored Barcaffè post on Facebook with swap comments" loading="lazy"></div></div>
+            </div>
+          </section>
+          <section class="pr pr-belmondo" aria-labelledby="pr3">
+            <header class="pr-head"><p class="pr-topic"><span class="t1" data-en="Email">E-poštni</span> <span class="t2" data-en="marketing">marketing</span></p><div class="pr-head-right"><span class="pr-num" data-en="Project 3">Projekt 3</span><h3 id="pr3" class="pr-brand">Belmondo</h3></div></header>
+            <div class="pr-bel">
+              <div class="fill-frame email-frame"><img src="images/belmondo-welcome-email.webp" width="600" height="2112" alt="Dobrodošlo e-sporočilo Belmondo s kodo WELCOME10 in izbranimi balerinkami" data-en-alt="Belmondo welcome email with the code WELCOME10 and selected ballet flats" loading="lazy"></div>
+              <div>
+                <div class="pcard"><p class="card-title" data-en="Belmondo Shoes — from visitors to customers">Belmondo Shoes — od obiskovalcev do kupcev</p><p class="card-sub" data-en="Email marketing &amp; lead generation">E-poštni marketing &amp; pridobivanje potencialnih kupcev</p><h4 data-en="Opportunity">Priložnost</h4><p data-en="How do you turn online store visitors into customers? I designed an email automation concept that encourages newsletter sign-ups, builds a relationship with the brand and motivates a first purchase.">Kako obiskovalce spletne trgovine spremeniti v kupce? Zasnovala sem koncept e-poštne avtomatizacije, ki spodbuja prijave na e-novice, gradi odnos z blagovno znamko in motivira k prvemu nakupu.</p><h4 data-en="Creative idea">Kreativna ideja</h4><p class="quote" data-en="10% off the first purchase in exchange for a newsletter sign-up.">10 % popusta za prvi nakup v zameno za prijavo na e-novice.</p><p data-en="The visitor signs up through a pop-up, receives a welcome email with the code WELCOME10 and discovers selected products from the brand.">Obiskovalec se prijavi prek pojavnega okna, prejme dobrodošlo e-sporočilo s kodo WELCOME10 in spozna izbrane izdelke blagovne znamke.</p></div>
+                <div class="pcard"><h4 data-en="Strategy">Strategija</h4><ul><li data-en="I designed a pop-up for collecting email contacts.">Zasnovala sem pojavno okno za pridobivanje e-poštnih kontaktov.</li><li data-en="I designed a welcome email with a promotional offer and a product showcase.">Oblikovala sem dobrodošlo e-sporočilo s promocijsko ponudbo in predstavitvijo izdelkov.</li><li data-en="I planned to measure sign-ups, clicks and conversions into first purchases.">Predvidela sem merjenje prijav, klikov in konverzij v prve nakupe.</li></ul><h4 data-en="Visual design">Vizualna zasnova</h4><p data-en="A minimalist, elegant design focused on quality footwear, product photography and clear calls to action.">Minimalističen, eleganten dizajn s poudarkom na kakovostni obutvi, produktni fotografiji in jasnih pozivih k nakupu.</p><h4 data-en="Result">Rezultat</h4><p data-en="An email sales funnel concept that connects lead generation, brand introduction and encouraging the first purchase.">Razvit koncept e-poštnega prodajnega lijaka, ki povezuje pridobivanje novih kontaktov, predstavitev blagovne znamke in spodbujanje prvega nakupa.</p><p class="note" data-en="Independent concept project. The automation was not implemented, so actual results are not available.">Samostojni konceptualni projekt. Avtomatizacija ni bila izvedena, zato dejanski rezultati niso na voljo.</p></div>
+                <div class="bel-pair"><img class="shot pair-img" src="images/belmondo-popup.webp" width="618" height="717" alt="Pojavno okno Belmondo: 10 % popusta za prijavo na e-novice" data-en-alt="Belmondo pop-up: 10% off for a newsletter sign-up" loading="lazy"><img class="shot pair-img" src="images/belmondo-moodboard.webp" width="1080" height="1350" alt="Razpoloženjska tabla Belmondo: ročna izdelava in usnjeni čevlji" data-en-alt="Belmondo mood board: handcrafting and leather shoes" loading="lazy"></div>
               </div>
             </div>
           </section>
-<!--
-          <article class="case">
-            <div class="case-media"><span data-en="Image or screenshot">Slika ali posnetek zaslona</span></div>
-            <div class="case-body">
-              <p class="tag" data-en="Concept · 2026">Koncept · 2026</p>
-              <h3 data-en="Short-form video series">Serija kratkih videov</h3>
-              <p class="summary" data-en="A short-form video series for a local café, made for TikTok and Instagram Reels.">Serija kratkih videov za lokalno kavarno, prilagojena za TikTok in Instagram Reels.</p>
-              <dl class="steps"><div><dt data-en="Challenge">Izziv</dt><dd data-en="What did the café want? E.g. more young visitors.">Kaj je želel lokal doseči? Npr. več mladih obiskovalcev.</dd></div><div><dt data-en="Approach">Pristop</dt><dd data-en="Ideas, scripts, filming and editing, and a posting schedule.">Ideje, scenariji, snemanje in montaža ter urnik objav.</dd></div><div><dt data-en="Tools">Orodja</dt><dd class="tools"><img src="logos/capcut.svg" alt="CapCut" title="CapCut"><img src="logos/tiktok-light.svg" alt="TikTok" title="TikTok"><img src="logos/canva.svg" alt="Canva" title="Canva"></dd></div><div><dt data-en="Result">Rezultat</dt><dd data-en="Views, followers or saves.">Ogledi, sledilci ali shranjevanja.</dd></div></dl>
-            </div>
-          </article>
-          <article class="case">
-            <div class="case-media"><span data-en="Image or screenshot">Slika ali posnetek zaslona</span></div>
-            <div class="case-body">
-              <p class="tag" data-en="Concept · 2026">Koncept · 2026</p>
-              <h3 data-en="Meta ad campaign">Oglaševalska kampanja na Meti</h3>
-              <p class="summary" data-en="A paid campaign plan: target audience, ad creatives, budget and success metrics.">Načrt plačljive kampanje: ciljna skupina, oglasi, proračun in merila uspeha.</p>
-              <dl class="steps"><div><dt data-en="Challenge">Izziv</dt><dd data-en="The campaign goal and who it is for.">Cilj kampanje in komu je namenjena.</dd></div><div><dt data-en="Approach">Pristop</dt><dd data-en="Audience research, three ad creatives and a budget split.">Raziskava ciljne skupine, trije oglasi in razdelitev proračuna.</dd></div><div><dt data-en="Tools">Orodja</dt><dd class="tools"><img src="logos/meta.svg" alt="Meta Ads Manager" title="Meta Ads Manager"><img src="logos/canva.svg" alt="Canva" title="Canva"></dd></div><div><dt data-en="Result">Rezultat</dt><dd data-en="Reach, clicks or cost per result.">Doseg, klik ali cena na rezultat.</dd></div></dl>
-            </div>
-          </article>
--->
-          </div>
+          <section class="pr-other" aria-labelledby="pr-other">
+            <h2 id="pr-other"><span data-en="Other projects">Ostale projekte</span></h2>
+            <div class="phones"><div class="dev phone"><div class="screen-img"><img src="images/other-serum-portrait.webp" width="640" height="960" alt="Ženska si v večerni svetlobi nanaša serum s kapalko" data-en-alt="A woman applying serum with a dropper in evening light" loading="lazy"></div></div><div class="dev phone"><div class="screen-img"><img src="images/other-melora.webp" width="640" height="960" alt="Serum Melora Honey Repair Skin Elixir z medom in breskvami" data-en-alt="Melora Honey Repair Skin Elixir with honey and peaches" loading="lazy"></div></div><div class="dev phone"><div class="screen-img"><img src="images/other-valens.webp" width="640" height="1138" alt="Oglas Valens: Lost your bounce? Collagen brings it back." data-en-alt="Valens ad: Lost your bounce? Collagen brings it back." loading="lazy"></div></div><div class="dev phone"><div class="screen-img fit" style="--bg:url(images/other-jaguar.webp)"><img src="images/other-jaguar.webp" width="640" height="905" alt="Plakat Jaguar s športnim avtomobilom XJ220 pred gorsko pokrajino in rdečim soncem" data-en-alt="Jaguar poster with the XJ220 sports car in front of mountains and a red sun" loading="lazy"></div></div></div>
+            <div class="laptops"><div class="laptop"><div class="lid"><video class="lap-video" src="videos/kombucha.mp4" muted loop playsinline preload="none" aria-label="Video oglas za kombučo" data-en-label="Kombucha video ad"></video></div><div class="base"></div></div><div class="laptop"><div class="lid"><video class="lap-video" src="videos/the-daily-doughnut.mp4" muted loop playsinline preload="none" aria-label="Video oglas The Daily Doughnut" data-en-label="The Daily Doughnut video ad"></video></div><div class="base"></div></div></div>
+          </section>
           </div>
         </div>
       </div>
@@ -466,11 +601,52 @@ async function go(id){
   history.replaceState(null,'','#'+id);
   const prev=byId[stack[0]];
   byId[id].classList.add('is-open');
+  revealProjects(true);
   await pull(byId[id]);
   prev.classList.remove('is-open');
   busy=false;
   if(queued){const q=queued;queued=null;go(q)}
 }
+
+const projectSheet=part(byId.projects,'.sheet');
+if(reduce)projectSheet.querySelectorAll('video').forEach(v=>{v.preload='metadata';v.controls=true});
+const revealItems=reduce?[]:[...projectSheet.querySelectorAll('.pr-intro,.pr-head,.pr-grid>div,.pr-split>*,.pr>.pr-hero,.card-wide,.pr-results>*,.pr-bel>.fill-frame,.pr-bel .pcard,.bel-pair,.pr-other h2,.phones>.dev,.laptops>.laptop')];
+revealItems.forEach(e=>e.classList.add('pr-reveal'));
+function revealProjects(fast){
+  if(!byId.projects.classList.contains('is-open'))return;
+  const box=projectSheet.getBoundingClientRect();
+  let n=0;
+  revealItems.forEach(el=>{
+    if(el.classList.contains('in'))return;
+    const r=el.getBoundingClientRect();
+    if(r.top<box.bottom-40&&r.bottom>box.top){el.style.transitionDelay=Math.min(n++,4)*(fast?35:90)+'ms';el.style.transitionDuration=fast?'.3s':'';el.classList.add('in');el.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}))}
+  });
+}
+let revealRaf=0;
+projectSheet.addEventListener('scroll',()=>{if(revealRaf)return;revealRaf=requestAnimationFrame(()=>{revealRaf=0;revealProjects()})},{passive:true});
+window.addEventListener('resize',revealProjects);
+
+const resultsRow=document.querySelector('.pr-results');
+const POSTER_RATIO=1167/2000,PHONE_RATIO=9/19.5;
+function fitResults(){
+  if(!resultsRow)return;
+  if(matchMedia('(max-width:720px)').matches){resultsRow.style.gridTemplateColumns='';return}
+  const card=resultsRow.firstElementChild;
+  const gap=parseFloat(getComputedStyle(resultsRow).columnGap)||0;
+  const width=resultsRow.clientWidth;
+  resultsRow.style.alignItems='start';
+  let height=card.offsetHeight;
+  for(let i=0;i<4;i++){
+    card.style.width=Math.max(220,width-2*gap-height*(POSTER_RATIO+PHONE_RATIO))+'px';
+    height=card.offsetHeight;
+  }
+  card.style.width='';
+  resultsRow.style.alignItems='';
+  resultsRow.style.gridTemplateColumns=`minmax(0,1fr) ${(height*POSTER_RATIO).toFixed(1)}px ${(height*PHONE_RATIO).toFixed(1)}px`;
+}
+let fitRaf=0;
+window.addEventListener('resize',()=>{cancelAnimationFrame(fitRaf);fitRaf=requestAnimationFrame(fitResults)});
+document.fonts.ready.then(fitResults);
 
 const hour=new Date().getHours();
 const part_of_day=hour>=5&&hour<12?0:hour>=12&&hour<18?1:2;
@@ -493,6 +669,7 @@ function setLang(lang){
   labels.forEach(e=>e.setAttribute('aria-label',en?e.dataset.enLabel:e.dataset.slLabel));
   document.getElementById('greeting').textContent=greetings[lang][part_of_day];
   document.querySelectorAll('.lang-switch button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+  if(typeof fitResults==='function'&&resultsRow)fitResults();
   try{localStorage.setItem('lang',lang)}catch(e){}
 }
 
@@ -543,6 +720,8 @@ folders.forEach(f=>{
 });
 byId[first].classList.add('is-open');
 applyStack();
+fitResults();
+revealProjects(true);
 
 function inkFor(hex){
   const [r,g,b]=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255).map(v=>v<=.03928?v/12.92:((v+.055)/1.055)**2.4);
